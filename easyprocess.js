@@ -120,7 +120,7 @@ VoxEngine.forwardCallToUser = function (onEstablishedCallback, video) {
  */
 VoxEngine.forwardCallToUserDirect = function (onEstablishedCallback) {
     VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
-        const newCall = this.callUserDirect(e.call, e.destination, e.callerid, e.displayName, null);
+        const newCall = VoxEngine.callUserDirect(e.call, e.destination, e.callerid, e.displayName, null);
         VoxEngine.easyProcess(e.call, newCall, onEstablishedCallback, true);
     });
 };
