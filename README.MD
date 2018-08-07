@@ -1,6 +1,10 @@
 # EasyProcess source code
 
-The `easyprocess.js` file content source of the VoxEngine.easyProcess(call1, call2) function.
+The `easyprocess.js` file contains the source code of the VoxEngine.easyProcess(call1, call2) function and helper functions:
+*forwardCallToPSTN
+*forwardCallToUser
+*forwardCallToUserDirect
+*forwardCallToSIP
 
 You can use and modify this source code for any VoxEngine project in the Voximplant cloud.
 
