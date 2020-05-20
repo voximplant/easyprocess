@@ -8,5 +8,5 @@ The `easyprocess.js` file contains the source code of the VoxEngine.easyProcess(
 
 You can use and modify this source code for any VoxEngine project in the Voximplant cloud.
 
-* More about [VoxEngine](http://voximplant.com/docs/references/appengine/)
-* [Documentation for the EasyProcess function](http://voximplant.com/docs/references/appengine/VoxEngine.html#VoxEngine_easyProcess)
+* More about [VoxEngine](https://voximplant.com/docs/introduction/introduction_to_voximplant/capabilities_and_components/voxengine)
+* [Documentation for the EasyProcess function](https://voximplant.com/docs/references/voxengine/voxengine/easyprocess)
