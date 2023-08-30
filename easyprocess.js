@@ -3,8 +3,8 @@
  * For more details see the <a href="https://voximplant.com/docs/references/voxengine/voxengine/easyprocess">online documentation</a>.
  * @param {Call} call1 Incoming alerting call
  * @param {Call} call2 Newly created outgoing call
- * @param {Function} [onEstablishedCallback] Function to be called once call is established. Both call1 and call2 are passed to this function as parameters
- * @param {Boolean} [direct] If it's true, P2P mode will be enabled. It's false by default.
+ * @param {Function} [onEstablishedCallback] Function to be called once the call is established. Both call1 and call2 are passed to this function as parameters
+ * @param {Boolean} [direct] If it is true, the P2P mode will be enabled. It is false by default.
  */
 VoxEngine.easyProcess = (call1, call2, onEstablishedCallback, direct) => {
   const defaultHangupHandler = (e) => {
@@ -113,7 +113,7 @@ VoxEngine.easyProcess = (call1, call2, onEstablishedCallback, direct) => {
 };
 
 /**
- * Helper function to forward incoming call to PSTN. The method handles numbers only in E.164 format by default. If you need to handle a number in another format, pass additional function (as a parameter) to the method.
+ * Helper function to forward an incoming call to PSTN. The method handles numbers only in the E.164 format by default. If you need to handle a number in another format, pass an additional function (as a parameter) to the method.
  * For more details see the <a href="https://voximplant.com/docs/references/voxengine/voxengine/forwardcalltopstn">online documentation</a>.
  * @param {Function} [numberTransform] Optional function used to transform dialed number to international format. This function accepts dialed number and must return phone number in E.164 format
  * @param {Function} [onEstablishedCallback] Optional function that is invoked after call is established. Both calls (incoming and outgoing) are passed to this function
@@ -134,10 +134,10 @@ VoxEngine.forwardCallToPSTN = (numberTransform, onEstablishedCallback, options) 
 };
 
 /**
- * Helper function to forward incoming call to user of current application. Dialed number is interpreted as username.
+ * Helper function to forward an incoming call to a user of the current application. Dialed number is considered as username.
  * For more details see the <a href="https://voximplant.com/docs/references/voxengine/voxengine/forwardcalltouser">online documentation</a>.
  * @param {Function} [onEstablishedCallback] Optional function that is invoked after call is established. Both calls (incoming and outgoing) are passed to this function
- * @param {Boolean} [video] Specifies if the call should have video support. Please note that price for audio-only and video calls is different!
+ * @param {Boolean} [video] Specifies if the call should have video support. Please note that the price for audio-only and video calls is different!
  */
 VoxEngine.forwardCallToUser = (onEstablishedCallback, video) => {
   VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
@@ -154,7 +154,7 @@ VoxEngine.forwardCallToUser = (onEstablishedCallback, video) => {
 };
 
 /**
- * Helper function to forward incoming call to user of current application in P2P mode. Dialed number is interpreted as username. Due to P2P mode, audio playback and recording will not make any effect.
+ * Helper function to forward an incoming call to a user of the current application in the P2P mode. Dialed number is considered as username. Due to the P2P mode, audio playback and recording will not work.
  * For more details see the <a href="https://voximplant.com/docs/references/voxengine/voxengine/forwardcalltouserdirect">online documentation</a>.
  * @param {Function} [onEstablishedCallback] Optional function that is invoked after call is established. Both calls (incoming and outgoing) are passed to this function
  */
@@ -170,10 +170,10 @@ VoxEngine.forwardCallToUserDirect = (onEstablishedCallback) => {
 };
 
 /**
- * Helper function to forward incoming call to dialed SIP URI.
+ * Helper function to forward an incoming call to a dialed SIP URI.
  * For more details see the <a href="https://voximplant.com/docs/references/voxengine/voxengine/forwardcalltosip">online documentation</a>.
  * @param {Function} [onEstablishedCallback] Optional function that is invoked after call is established. Both calls (incoming and outgoing) are passed to this function
- * @param {Boolean} [video] Specifies if the call should have video support. Please note that price for audio-only and video calls is different!
+ * @param {Boolean} [video] Specifies if the call should have video support. Please note that the price for audio-only and video calls is different!
  */
 VoxEngine.forwardCallToSIP = function (onEstablishedCallback, video) {
   VoxEngine.addEventListener(AppEvents.CallAlerting, (e) => {
